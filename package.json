@@ -2,5 +2,23 @@
   "dependencies": {
     "bootstrap": "^5.2.0",
     "react-bootstrap": "^2.5.0"
-  }
+  },
+  "name": "fspp-app",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lortiz528/FSPP-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lortiz528/FSPP-App/issues"
+  },
+  "homepage": "https://github.com/Lortiz528/FSPP-App#readme"
 }

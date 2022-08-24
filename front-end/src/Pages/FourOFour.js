@@ -1,5 +1,7 @@
+import './FourOFour.scss';
+
 function FourOFour() {
-  return <div>Error!! No page found, you Weeb</div>;
+  return <div className="fourfour">Error!! No page found, you Weeb</div>;
 }
 
 export default FourOFour;
