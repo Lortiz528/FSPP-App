@@ -1,4 +1,4 @@
-import Amiibos from '../Components/Amiibos';
+import Amiibos from '../Components/Index/Amiibos';
 
 function Index() {
   return (

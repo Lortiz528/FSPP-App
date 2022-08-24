@@ -1,4 +1,4 @@
-import Amiibo from "../Components/Amiibo";
+import Amiibo from "../Components/Show/Amiibo";
 
 function Show() {
     return (

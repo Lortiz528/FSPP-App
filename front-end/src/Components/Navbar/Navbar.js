@@ -9,15 +9,16 @@ function Navbar() {
       </h1>
 
       <h1 className="navSnackLink">
-        <Link to="/amiibos">amiibos</Link>
+        <Link to="/amiibos">Amiibos</Link>
       </h1>
       <h1>
-        <Button variant="outline-light" className="newSnackButton">
-          <Link to="/amiibos/new" className="navNewSnack">
-            New Snack
+        <Button variant="outline-light" className="newAmiiboButton">
+          <Link to="/amiibos/new" className="navNewAmiibo">
+            New Amiibo
           </Link>
         </Button>
       </h1>
+      <Link to='/about' >About</Link>
     </nav>
   );
 }

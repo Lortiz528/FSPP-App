@@ -1,0 +1,47 @@
+.amiiboImage {
+    width: 150px;
+    height: 200px;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+    grid-column: 1 / span 5;
+  }
+
+  .amiibos{
+    margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  
+  
+  }
+
+  .amiiboCard{
+    border: 3px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    background-color: aliceblue;
+    box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5);
+    
+  }
+
+  .amiibo{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    width: 150px;
+    padding: 1em;
+    // background-color: rgb(255, 252, 242);
+  }
+  

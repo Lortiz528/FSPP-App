@@ -1,4 +1,4 @@
-import NewAmiibo from '../Components/NewAmiibo';
+import NewAmiibo from '../Components/New/NewAmiibo';
 
 function New() {
   return (

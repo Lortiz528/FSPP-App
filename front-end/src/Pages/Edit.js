@@ -1,4 +1,4 @@
-import EditAmiibo from '../Components/EditAmiibo';
+import EditAmiibo from '../Components/Edit/EditAmiibo';
 
 function Edit() {
   return (

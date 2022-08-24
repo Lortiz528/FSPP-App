@@ -2,15 +2,16 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
 //pages
-import Home from './Components/Home';
+import Home from './Components/Home/Home';
 import New from './Pages/New';
 import Edit from './Pages/Edit';
 import Index from './Pages/Index';
 import Show from './Pages/Show';
 import FourOFour from './Pages/FourOFour';
+import About from './Pages/About';
 
 //components
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/amiibos/new" element={<New />} />
           <Route path="/amiibos/:id" element={<Show />} />
           <Route path="/amiibos/:id/edit" element={<Edit />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>
       </section>
