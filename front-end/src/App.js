@@ -12,6 +12,7 @@ import About from './Pages/About';
 
 //components
 import Navbar from './Components/Navbar/Navbar';
+import Collections from './Components/Collections';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <section>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/collections" element={<Collections />} />
           <Route path="/amiibos" element={<Index />} />
           <Route path="/amiibos/new" element={<New />} />
           <Route path="/amiibos/:id" element={<Show />} />
