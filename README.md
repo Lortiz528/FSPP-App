@@ -6,7 +6,7 @@ this is an app to maintain various collections such as retro video games, consol
 
 - [Deployed API Server]()
 - [Deployed frontend]()
-- [Trello Board]()
+- [Trello Board](https://trello.com/invite/b/ABTWrZXr/af5e35ff4cbe5df2caec988fc6eac12d/fspp-inventory-app)
 - [ERD]()
 - [Wireframes]()
 
