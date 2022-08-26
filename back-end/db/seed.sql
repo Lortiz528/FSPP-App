@@ -46,17 +46,17 @@ INSERT INTO consoles (name, brand, quantity, color, has_box, is_sealed, image) V
 
 ('Gameboy SP', 'Nintendo', 21, 'Graphite', true, false, 'https://m.media-amazon.com/images/I/41C297PQC7L.jpg'),
 
-('Playstation 1', 'Playstation', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/PlayStation-SCPH-1000-with-Controller.jpg/440px-PlayStation-SCPH-1000-with-Controller.jpg'),
+('Playstation 1', 'Sony', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/PlayStation-SCPH-1000-with-Controller.jpg/440px-PlayStation-SCPH-1000-with-Controller.jpg'),
 
-('Playstation 2', 'Playstation', 1, 'black', true, false, 'https://m.media-amazon.com/images/I/61pETE6v4vL._SX522_.jpg'),
+('Playstation 2', 'Sony', 1, 'black', true, false, 'https://m.media-amazon.com/images/I/61pETE6v4vL._SX522_.jpg'),
 
-('Playstation 3', 'Playstation', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Sony-PlayStation-3-CECHA01-wController-L.jpg/500px-Sony-PlayStation-3-CECHA01-wController-L.jpg'),
+('Playstation 3', 'Sony', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Sony-PlayStation-3-CECHA01-wController-L.jpg/500px-Sony-PlayStation-3-CECHA01-wController-L.jpg'),
 
-('Playstation 4', 'Playstation', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/PS4-Console-wDS4.jpg/440px-PS4-Console-wDS4.jpg'),
+('Playstation 4', 'Sony', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/PS4-Console-wDS4.jpg/440px-PS4-Console-wDS4.jpg'),
 
-('Vita', 'Playstation', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/PlayStation-Vita-1101-FL.jpg/484px-PlayStation-Vita-1101-FL.jpg'),
+('Playstation Vita', 'Sony', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/PlayStation-Vita-1101-FL.jpg/484px-PlayStation-Vita-1101-FL.jpg'),
 
-('PSP', 'Playstation', 2, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Psp-1000.jpg/390px-Psp-1000.jpg');
+('Playstation Portable', 'Sony', 2, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Psp-1000.jpg/390px-Psp-1000.jpg');
 
 INSERT INTO users (username, password, email, created_at) VALUES
 ('test1', 'test1', 'test1@test.com', NOW()),
