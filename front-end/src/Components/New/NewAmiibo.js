@@ -12,7 +12,7 @@ function NewAmiibo() {
   const [amiibo, setAmiibo] = useState({
     name: '',
     series: '',
-    is_boxed: '',
+    is_boxed: false,
     quantity: 0,
     image: '',
   });
