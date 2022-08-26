@@ -11,8 +11,8 @@ const getAllAmiibos = async () => {
 
 const getAmiiboByID = async (id) => {
   try {
-    const snack = await db.any('SELECT * FROM amiibos WHERE id = $1', id);
-    return snack;
+    const amiibo = await db.any('SELECT * FROM amiibos WHERE id = $1', id);
+    return amiibo;
   } catch (err) {
     return err;
   }
