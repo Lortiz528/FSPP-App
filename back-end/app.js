@@ -3,7 +3,8 @@
 const express = require('express');
 const cors = require('cors');
 const amiiboController = require('./controllers/amiiboController');
-const collectionsController = require('./controllers/collectionsController')
+const collectionsController = require('./controllers/collectionsController');
+const consoleController = require('./controllers/consoleController');
 
 // CONFIGURATION
 const app = express();
@@ -12,7 +13,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/amiibos', amiiboController);
-app.use('/collections', collectionsController)
+app.use('/collections', collectionsController);
+app.use('/consoles', consoleController);
 
 // ROUTES
 app.get('/', (req, res) => {

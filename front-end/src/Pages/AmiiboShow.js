@@ -1,6 +1,6 @@
 import Amiibo from "../Components/Show/Amiibo";
 
-function Show() {
+function AmiiboShow() {
     return (
       <div className="Show">
         <Amiibo />
@@ -8,4 +8,4 @@ function Show() {
     );
   }
   
-  export default Show;
+  export default AmiiboShow;

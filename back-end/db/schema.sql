@@ -19,16 +19,16 @@ CREATE TABLE collections (
     image TEXT
 );
 
--- CREATE TABLE consoles (
---     id SERIALL NOT NULL PRIMARY KEY,
---     name TEXT NOT NULL,
---     brand TEXT NOT NULL,
---     quantity INT DEFAULT 0,
---     has_box BOOLEAN,
---     functioning BOOLEAN
-
-
--- )
+CREATE TABLE consoles (
+    id SERIAL NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    brand TEXT NOT NULL,
+    quantity INT DEFAULT 0,
+    color TEXT,
+    has_box BOOLEAN,
+    is_sealed BOOLEAN,
+    image TEXT
+);
 
 CREATE TABLE users (
     id SERIAL NOT NULL PRIMARY KEY,

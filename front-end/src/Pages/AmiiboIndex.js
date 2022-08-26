@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { Button } from 'react-bootstrap';
 
 
-function Index() {
+function AmiiboIndex() {
   return (
     <div>
       <h1>Amiibos Collection</h1>
@@ -17,4 +17,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default AmiiboIndex;

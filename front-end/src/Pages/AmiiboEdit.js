@@ -1,6 +1,6 @@
 import EditAmiibo from '../Components/Edit/EditAmiibo';
 
-function Edit() {
+function AmiiboEdit() {
   return (
     <div className="New Edit">
       <EditAmiibo />
@@ -8,4 +8,4 @@ function Edit() {
   );
 }
 
-export default Edit;
+export default AmiiboEdit;

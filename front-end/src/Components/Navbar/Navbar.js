@@ -7,6 +7,8 @@ function Navbar() {
       <h2 className="navSnackLink">
         <Link to="/">Go Home</Link>
       </h2>
+      <a href='https://www.nintendo.com/amiibo/'>Visit Nintendo's Amiibo page</a>
+      <br/>
 
       {/* <h1 className="navSnackLink">
         <Link to="/amiibos">Amiibos</Link>

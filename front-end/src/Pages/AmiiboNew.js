@@ -1,6 +1,6 @@
 import NewAmiibo from '../Components/New/NewAmiibo';
 
-function New() {
+function AmiiboNew() {
   return (
     <div>
       <NewAmiibo />
@@ -8,4 +8,4 @@ function New() {
   );
 }
 
-export default New;
+export default AmiiboNew;
