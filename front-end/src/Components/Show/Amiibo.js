@@ -1,4 +1,4 @@
-import './show.scss';
+import './AmiiboShow.scss';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';

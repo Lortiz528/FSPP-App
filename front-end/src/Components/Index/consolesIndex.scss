@@ -1,0 +1,12 @@
+.consoleImage{
+    width: 150px;
+}
+
+.console{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    width: 150px;
+    padding: 1em;
+    // background-color: rgb(255, 252, 242);
+  }

@@ -1,4 +1,4 @@
-import './new.scss';
+import './AmiiboNew.scss';
 
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';

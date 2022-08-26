@@ -1,4 +1,4 @@
-import './Edit.scss';
+import './AmiiboEdit.scss';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';

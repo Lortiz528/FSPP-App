@@ -10,6 +10,12 @@ import AmiiboShow from './Pages/AmiiboShow';
 import FourOFour from './Pages/FourOFour';
 import About from './Pages/About';
 
+import ConsoleIndex from './Pages/ConsoleIndex';
+import ConsoleShow from './Pages/ConsoleShow';
+import ConsoleNew from './Pages/ConsoleNew';
+import ConsoleEdit from './Pages/ConsoleEdit';
+
+
 //components
 import Navbar from './Components/Navbar/Navbar';
 import Collections from './Components/Collections';
@@ -26,6 +32,10 @@ function App() {
           <Route path="/amiibos/new" element={<AmiiboNew />} />
           <Route path="/amiibos/:id" element={<AmiiboShow />} />
           <Route path="/amiibos/:id/edit" element={<AmiiboEdit />} />
+          <Route path="/consoles" element={<ConsoleIndex />} />
+          <Route path="/consoles/:id" element={<ConsoleShow />} />
+          <Route path="/consoles/new" element={<ConsoleNew />} />
+          <Route path="/consoles/:id/edit" element={<ConsoleEdit />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>

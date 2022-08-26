@@ -1,4 +1,4 @@
-import './index.scss';
+import './amiiboIndex.scss';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
