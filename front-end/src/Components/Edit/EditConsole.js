@@ -40,8 +40,20 @@ function EditConsole() {
     });
   };
 
-  const handleCheckbox = () => {
-    setconsole({ ...console, has_box: !console.has_box });
+  const handleBoxedCheckbox = () => {
+    setconsole({
+      ...console,
+      has_box: !console.has_box,
+      // is_sealed: !console.is_sealed,
+    });
+  };
+
+  const handleSealedCheckbox = () => {
+    setconsole({
+      ...console,
+      // has_box: !console.has_box,
+      is_sealed: !console.is_sealed
+    });
   };
 
   const handleSubmit = (e) => {
@@ -104,22 +116,22 @@ function EditConsole() {
 
         {console.has_box ? (
           <Form.Group>
-            <Form.Label htmlFor="has_box">No longer have the Box?</Form.Label>
+            <Form.Label htmlFor="has_box">No longer have the Box? Hit the switch!</Form.Label>
             <Form.Check
               id="has_box"
-              type="checkbox"
+              type="switch"
               value={console.has_box}
-              onChange={handleCheckbox}
+              onChange={handleBoxedCheckbox}
             ></Form.Check>
           </Form.Group>
         ) : (
           <Form.Group>
-            <Form.Label htmlFor="has_box">Acquire a Box?</Form.Label>
+            <Form.Label htmlFor="has_box">Acquire a Box? Hit the Switch!</Form.Label>
             <Form.Check
               id="has_box"
-              type="checkbox"
+              type="switch"
               value={console.has_box}
-              onChange={handleCheckbox}
+              onChange={handleBoxedCheckbox}
             ></Form.Check>
           </Form.Group>
         )}
@@ -128,23 +140,23 @@ function EditConsole() {
         {console.is_sealed ? (
           <Form.Group>
             <Form.Label htmlFor="is_sealed">
-              No longer factory sealed?
+              No longer factory sealed? Switch it back!
             </Form.Label>
             <Form.Check
               id="is_sealed"
-              type="checkbox"
+              type="switch"
               value={console.is_sealed}
-              onChange={handleCheckbox}
+              onChange={handleSealedCheckbox}
             ></Form.Check>
           </Form.Group>
         ) : (
           <Form.Group>
-            <Form.Label htmlFor="has_box">Factory Sealed?</Form.Label>
+            <Form.Label htmlFor="has_box">Factory Sealed? Hit the Switch!</Form.Label>
             <Form.Check
               id="is_sealed"
-              type="checkbox"
+              type="switch"
               value={console.is_sealed}
-              onChange={handleCheckbox}
+              onChange={handleSealedCheckbox}
             ></Form.Check>
           </Form.Group>
         )}

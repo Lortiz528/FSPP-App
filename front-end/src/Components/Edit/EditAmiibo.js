@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 //import { ToastContainer, toast } from 'react-toastify';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -57,7 +57,7 @@ function EditAmiibo() {
   };
 
   return (
-    <section>
+    <section className='editAmiiboForm'>
       {/* <ToastContainer /> */}
       <h1>Edit Amiibo</h1>
       <Form onSubmit={handleSubmit}>
@@ -131,7 +131,7 @@ function EditAmiibo() {
           Update Amiibo
         </Button>
       </Form>
-
+          <button><Link to='/amiibos'>Go Back</Link></button>
       {error && <p>{error}</p>}
     </section>
   );

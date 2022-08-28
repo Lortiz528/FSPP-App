@@ -1,0 +1,47 @@
+.amiiboImageCard img{
+    width: 150px;
+    cursor: pointer;
+    
+}
+
+.amiiboImageCard img:hover{
+    width: 300px;
+    
+}
+
+.amiiboImageCard{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    // border: 3px solid black;
+    // border-radius: 15px;
+}
+
+.rosterCard{
+    border: 2px solid black;
+    border-radius: 15px;
+    gap: 2px;
+}
+
+.rosterName{
+    border: 1px solid darkblue;
+    border-radius: 15px;
+    margin-top: 5%;
+    background-color: bisque;
+    cursor: pointer; 
+}
+
+.rosterSeries{
+    border: 1px solid darkblue;
+    border-radius: 15px;
+    background-color: bisque;
+    cursor: pointer;
+}
+
+.newAmiiboFormSection{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}

@@ -29,7 +29,7 @@ function NewConsole() {
   };
 
   const handleCheckbox = () => {
-    setConsole({ ...console, has_box: !console.has_box });
+    setConsole({ ...console, has_box: !console.has_box, is_sealed: !console.is_sealed });
   };
 
   const handleSubmit = (e) => {
