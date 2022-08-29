@@ -23,5 +23,6 @@ const cn = DATABASE_URL
 // var db = pgp('postgres://username:password@host:port/database')
 
 const db = pgp(cn);
+//const db = pgp(process.env.DATABASE_URL ? prodConnection : devConnection)
 
 module.exports = db;
