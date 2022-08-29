@@ -8,7 +8,7 @@ INSERT INTO amiibos (name, series, is_boxed, quantity, image) VALUES
 ('Ike', 'Super Smash Bros.', false, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_21010000-00180002.png'),
 ('Resetti', 'Animal Crossing', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_018e0000-02490502.png');
 
-INSERT INTO collections (name, image) VALUES ('Amiibos', 'https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_1.0/c_scale,w_800/ncom/en_US/amiibo/amiibo-lineup-img'),
+INSERT INTO collections (name, image) VALUES ('Amiibos', 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000000-00000002.png'),
 ('Consoles', 'https://wallpaperaccess.com/full/2520803.jpg');
 
 INSERT INTO consoles (name, brand, quantity, color, has_box, is_sealed, image) VALUES
