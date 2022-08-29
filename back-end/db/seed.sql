@@ -9,7 +9,7 @@ INSERT INTO amiibos (name, series, is_boxed, quantity, image) VALUES
 ('Resetti', 'Animal Crossing', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_018e0000-02490502.png');
 
 INSERT INTO collections (name, image) VALUES ('Amiibos', 'https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_1.0/c_scale,w_800/ncom/en_US/amiibo/amiibo-lineup-img'),
-('Consoles', 'https://cutewallpaper.org/21/video-game-console-wallpaper/Epic-video-game-wallpaper-Retro-video-games,-Games,-Retro-.jpg'); 
+('Consoles', 'https://wallpaperaccess.com/full/2520803.jpg'); 
 
 INSERT INTO consoles (name, brand, quantity, color, has_box, is_sealed, image) VALUES
 ('Switch', 'Nintendo', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Nintendo-Switch-Console-Docked-wJoyConRB.jpg/430px-Nintendo-Switch-Console-Docked-wJoyConRB.jpg'),
