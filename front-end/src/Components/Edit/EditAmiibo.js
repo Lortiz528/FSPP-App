@@ -2,9 +2,9 @@ import './AmiiboEdit.scss';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+//import { ToastContainer, toast } from 'react-toastify';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import success from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/Sounds/mixkit-player-boost-recharging-2040.wav'
+import success from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/mixkit-player-boost-recharging-2040.wav'
 
 const API = process.env.REACT_APP_API_URL;
 
