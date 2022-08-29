@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import deleteSound from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/Sounds/mixkit-player-losing-or-failing-2042.wav'
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -19,10 +20,17 @@ const Amiibo = () => {
       .catch((err) => setError(err));
   }, [id]);
 
+  const playAudio = () => {
+    new Audio(deleteSound).play();
+  };
+
   const handleDelete = () => {
     axios
       .delete(`${API}/amiibos/${id}`)
-      .then((res) => navigate('/amiibos'))
+      .then((res) => {
+        playAudio();
+        navigate('/amiibos')
+      })
       .catch((err) => setError(err));
   };
 

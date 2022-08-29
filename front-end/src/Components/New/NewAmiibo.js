@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
+import creationSound from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/Sounds/mixkit-completion-of-a-level-2063.wav'
 
 const API = process.env.REACT_APP_API_URL;
 const amiiboAPI = 'https://www.amiiboapi.com/api/amiibo/';
@@ -38,10 +39,9 @@ function NewAmiibo() {
     setDisplay(!display);
   };
 
-  //console.log(amiiboData);
-  // selectHandler = (event) => {
-  //   setChosenSeries(event.target.value);
-  // };
+  const playAudio = () => {
+    new Audio(creationSound).play();
+  };
 
   const handleTextChange = (event) => {
     setAmiibo({
@@ -58,7 +58,10 @@ function NewAmiibo() {
     e.preventDefault();
     axios
       .post(`${API}/amiibos/new`, amiibo)
-      .then(() => navigate('/amiibos'))
+      .then(() => {
+        playAudio()
+        navigate('/amiibos')
+      })
       .catch((err) => setError(err));
   };
 
