@@ -10,12 +10,14 @@ CREATE TABLE amiibos (
     quantity INT DEFAULT 0,
     image TEXT
 );
+
 DROP TABLE IF EXISTS collections;
 CREATE TABLE collections (
     id SERIAL NOT NULL PRIMARY KEY,
     name TEXT NOT NULL,
     image TEXT
 );
+
 DROP TABLE IF EXISTS consoles;
 CREATE TABLE consoles (
     id SERIAL NOT NULL PRIMARY KEY,
@@ -27,6 +29,7 @@ CREATE TABLE consoles (
     is_sealed BOOLEAN,
     image TEXT
 );
+
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     id SERIAL NOT NULL PRIMARY KEY,
@@ -35,6 +38,7 @@ CREATE TABLE users (
     email TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT NOW()
 );
+
 DROP TABLE IF EXISTS userAmiibos;
 CREATE TABLE userAmiibos (
     id SERIAL NOT NULL PRIMARY KEY,
