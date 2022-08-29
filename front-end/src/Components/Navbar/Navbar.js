@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className='nav'>
+    <nav className='navbar'>
      <Link to="/">Go Home</Link>
+     <Link to='/collections' >Collections</Link>
      <Link to='/about' >About</Link>
     </nav>
   );

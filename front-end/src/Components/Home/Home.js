@@ -1,14 +1,10 @@
-import Collections from '../Collections';
-
+import './home.scss'
 function Home() {
   return (
-    <section>
+    <section className='home'>
       <h1>
-        Welcome to your collections App, you Weeb! See your Collections Below
+        Welcome to your Inventory App
       </h1>
-      <div>
-        <Collections />
-      </div>
     </section>
   );
 }
