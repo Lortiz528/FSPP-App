@@ -4,6 +4,7 @@ import { Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 //import { ToastContainer, toast } from 'react-toastify';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import success from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/Sounds/mixkit-player-boost-recharging-2040.wav';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -33,6 +34,10 @@ function EditConsole() {
       });
   }, [id]);
 
+  const playAudio = () => {
+    new Audio(success).play();
+  };
+
   const handleTextChange = (event) => {
     setconsole({
       ...console,
@@ -52,7 +57,7 @@ function EditConsole() {
     setconsole({
       ...console,
       // has_box: !console.has_box,
-      is_sealed: !console.is_sealed
+      is_sealed: !console.is_sealed,
     });
   };
 
@@ -62,6 +67,7 @@ function EditConsole() {
     axios
       .put(`${API}/consoles/${id}`, console)
       .then((res) => {
+        playAudio();
         navigate('/consoles');
         // toast.success("Snack updated successfully!");
       })
@@ -116,7 +122,9 @@ function EditConsole() {
 
         {console.has_box ? (
           <Form.Group>
-            <Form.Label htmlFor="has_box">No longer have the Box? Hit the switch!</Form.Label>
+            <Form.Label htmlFor="has_box">
+              No longer have the Box? Hit the switch!
+            </Form.Label>
             <Form.Check
               id="has_box"
               type="switch"
@@ -126,7 +134,9 @@ function EditConsole() {
           </Form.Group>
         ) : (
           <Form.Group>
-            <Form.Label htmlFor="has_box">Acquire a Box? Hit the Switch!</Form.Label>
+            <Form.Label htmlFor="has_box">
+              Acquire a Box? Hit the Switch!
+            </Form.Label>
             <Form.Check
               id="has_box"
               type="switch"
@@ -151,7 +161,9 @@ function EditConsole() {
           </Form.Group>
         ) : (
           <Form.Group>
-            <Form.Label htmlFor="has_box">Factory Sealed? Hit the Switch!</Form.Label>
+            <Form.Label htmlFor="has_box">
+              Factory Sealed? Hit the Switch!
+            </Form.Label>
             <Form.Check
               id="is_sealed"
               type="switch"

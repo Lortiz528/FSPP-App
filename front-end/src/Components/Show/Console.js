@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import deleteSound from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/Sounds/mixkit-player-losing-or-failing-2042.wav';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -22,16 +23,25 @@ const Console = () => {
   const handleDelete = () => {
     axios
       .delete(`${API}/consoles/${id}`)
-      .then((res) => navigate('/consoles'))
+      .then((res) => {
+        playAudio();
+        navigate('/consoles');
+      })
       .catch((err) => setError(err));
+  };
+
+  const playAudio = () => {
+    new Audio(deleteSound).play();
   };
 
   return (
     <article className="showconsoleDetails">
       {error && <p className="error">{error}</p>}
 
-      <div className="consoletats">
-        <h2>{console.brand} {console.name}</h2>
+      <div className="consolestats">
+        <h2>
+          {console.brand} {console.name}
+        </h2>
         <img src={console.image} alt={console.name} />
         <h5>Color: {console.color}</h5>
         <h5>Quantity in collection: {console.quantity}</h5>
@@ -39,7 +49,7 @@ const Console = () => {
         <h5>Factory Sealed? {console.is_sealed ? 'True' : 'False'}</h5>
       </div>
 
-      <div className="nav">
+      <div className="consoleNav">
         <Link to="/consoles">
           <Button variant="primary">Back</Button>
         </Link>

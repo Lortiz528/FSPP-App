@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
+import creationSound from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/Sounds/mixkit-completion-of-a-level-2063.wav';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -28,15 +29,26 @@ function NewConsole() {
     });
   };
 
+  const playAudio = () => {
+    new Audio(creationSound).play();
+  };
+
   const handleCheckbox = () => {
-    setConsole({ ...console, has_box: !console.has_box, is_sealed: !console.is_sealed });
+    setConsole({
+      ...console,
+      has_box: !console.has_box,
+      is_sealed: !console.is_sealed,
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post(`${API}/consoles/new`, console)
-      .then(() => navigate('/consoles'))
+      .then(() => {
+        playAudio();
+        navigate('/consoles');
+      })
       .catch((err) => setError(err));
   };
 
