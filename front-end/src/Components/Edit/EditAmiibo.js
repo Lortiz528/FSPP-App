@@ -4,7 +4,7 @@ import { Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 //import { ToastContainer, toast } from 'react-toastify';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-//import success from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/mixkit-player-boost-recharging-2040.wav'
+import success from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/mixkit-player-boost-recharging-2040.wav'
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -35,9 +35,9 @@ function EditAmiibo() {
   //sounds
   //https://stackoverflow.com/questions/54114171/how-to-play-an-mp3-once-onclick-in-react
 
-  // const playAudio = () => {
-  //   new Audio(success).play();
-  // };
+  const playAudio = () => {
+    new Audio(success).play();
+  };
 
   const handleTextChange = (event) => {
     setAmiibo({
@@ -56,7 +56,7 @@ function EditAmiibo() {
     axios
       .put(`${API}/amiibos/${id}`, amiibo)
       .then((res) => {
-        // playAudio();
+         playAudio();
         navigate('/amiibos');
         // toast.success("Snack updated successfully!");
       })

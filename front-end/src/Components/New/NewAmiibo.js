@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
-//import creationSound from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/mixkit-completion-of-a-level-2063.wav'
+import creationSound from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/mixkit-completion-of-a-level-2063.wav';
 
 const API = process.env.REACT_APP_API_URL;
 const amiiboAPI = 'https://www.amiiboapi.com/api/amiibo/';
@@ -39,9 +39,9 @@ function NewAmiibo() {
     setDisplay(!display);
   };
 
-  // const playAudio = () => {
-  //   new Audio(creationSound).play();
-  // };
+  const playAudio = () => {
+    new Audio(creationSound).play();
+  };
 
   const handleTextChange = (event) => {
     setAmiibo({
@@ -59,13 +59,11 @@ function NewAmiibo() {
     axios
       .post(`${API}/amiibos/new`, amiibo)
       .then(() => {
-        // playAudio()
-        navigate('/amiibos')
+        playAudio();
+        navigate('/amiibos');
       })
       .catch((err) => setError(err));
   };
-
-  //display all 800+ amiibo stock images
 
   const amiiboImageFillForm = (e) => {
     e.preventDefault();
@@ -110,15 +108,9 @@ function NewAmiibo() {
     );
   });
 
-  // const amiiboFillForm =(amiiboItem)=>{
-  //   setAmiibo({
-  //     ...amiibo, name: amiiboItem.name, series: amiiboItem.series, image: amiiboItem.image
-  //   })
-  // }
-
   return (
     <div>
-      <section className='newAmiiboFormSection'>
+      <section className="newAmiiboFormSection">
         <h1>Add Amiibo</h1>
         <Form onSubmit={handleSubmit} className="newForm">
           <Form.Group>
@@ -184,12 +176,17 @@ function NewAmiibo() {
         {display ? 'Hide Amiiboo Roster' : 'Show Amiibo Roster'}
       </Button>
       {error && <p>{error}</p>}
-      {display ?  <div> 
-        <br/>
-        <h3 className='clickInstructions'>Auto-Fill the form by clicking on an amiibos name, series, and Image!</h3>
-        <br/>
-        <div className="amiiboImageCard">{amiiboCards}</div>
-        </div>  : null}
+      {display ? (
+        <div>
+          <br />
+          <h3 className="clickInstructions">
+            Auto-Fill the form by clicking on an amiibos name, series, and
+            Image!
+          </h3>
+          <br />
+          <div className="amiiboImageCard">{amiiboCards}</div>
+        </div>
+      ) : null}
     </div>
   );
 }
