@@ -12,7 +12,7 @@ const {
 const {
   capitalizeName,
   checkValues,
-} = require('../Validations/amiiboValidation');
+} = require('../Validations/validationFuncs');
 
 //Index
 

@@ -50,7 +50,7 @@ function NewAmiibo() {
     });
   };
 
-  const handleCheckbox = () => {
+  const toggleSwitch = () => {
     setAmiibo({ ...amiibo, is_boxed: !amiibo.is_boxed });
   };
 
@@ -121,6 +121,7 @@ function NewAmiibo() {
               value={amiibo.name}
               onChange={handleTextChange}
               placeholder="Amiibo name.."
+              required
             ></Form.Control>
           </Form.Group>
           <Form.Group>
@@ -131,15 +132,16 @@ function NewAmiibo() {
               value={amiibo.series}
               onChange={handleTextChange}
               placeholder="Animal crossing, Super Smash bros., Etc."
+              required
             ></Form.Control>
           </Form.Group>
           <Form.Group>
             <Form.Label htmlFor="is_boxed">Boxed?</Form.Label>
             <Form.Check
               id="is_boxed"
-              type="checkbox"
+              type="switch"
               value={amiibo.is_boxed}
-              onChange={handleCheckbox}
+              onChange={toggleSwitch}
             ></Form.Check>
           </Form.Group>
           <Form.Group>

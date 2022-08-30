@@ -9,6 +9,11 @@ const {
   deleteConsole,
 } = require('../queries/consoles');
 
+const {
+  capitalizeName,
+  checkValues,
+} = require('../Validations/validationFuncs');
+
 //Index
 
 consoles.get('/', async (req, res) => {
@@ -32,18 +37,25 @@ consoles.get('/:id', async (req, res) => {
 });
 
 //create
-consoles.post('/new', async (req, res) => {
+consoles.post('/new', checkValues, async (req, res) => {
   const newConsole = await createConsole(req.body);
-  // console.log(newConsole);
+
+  newConsole.name = capitalizeName(newConsole.name);
+  newConsole.brand = capitalizeName(newConsole.brand);
+
   res.status(200).json(newConsole);
 });
 
 //update
 
-consoles.put('/:id', async (req, res) => {
+consoles.put('/:id', checkValues, async (req, res) => {
   const { id } = req.params;
   try {
     const updatedConsole = await updateConsole(id, req.body);
+
+    updatedConsole.name = capitalizeName(updatedConsole.name);
+    updatedConsole.brand = capitalizeName(updatedConsole.brand);
+    
     res.json(updatedConsole);
   } catch (error) {
     res.status(400).json({ error: error });

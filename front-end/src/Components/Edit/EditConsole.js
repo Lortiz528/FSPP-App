@@ -4,7 +4,7 @@ import { Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 //import { ToastContainer, toast } from 'react-toastify';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-//import success from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/mixkit-player-boost-recharging-2040.wav';
+import success from '../../mixkit-player-boost-recharging-2040.wav';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -34,9 +34,9 @@ function EditConsole() {
       });
   }, [id]);
 
-  // const playAudio = () => {
-  //   new Audio(success).play();
-  // };
+  const playAudio = () => {
+    new Audio(success).play();
+  };
 
   const handleTextChange = (event) => {
     setconsole({
@@ -45,18 +45,16 @@ function EditConsole() {
     });
   };
 
-  const handleBoxedCheckbox = () => {
+  const toggleBoxedSwitch = () => {
     setconsole({
       ...console,
       has_box: !console.has_box,
-      // is_sealed: !console.is_sealed,
     });
   };
 
-  const handleSealedCheckbox = () => {
+  const toggleSealedSwitch = () => {
     setconsole({
       ...console,
-      // has_box: !console.has_box,
       is_sealed: !console.is_sealed,
     });
   };
@@ -67,7 +65,7 @@ function EditConsole() {
     axios
       .put(`${API}/consoles/${id}`, console)
       .then((res) => {
-        // playAudio();
+        playAudio();
         navigate('/consoles');
         // toast.success("Snack updated successfully!");
       })
@@ -99,6 +97,7 @@ function EditConsole() {
             name="brand"
             value={console.brand}
             onChange={handleTextChange}
+            required
           />
         </Form.Group>
         <Form.Group controlId="quantity">
@@ -129,7 +128,7 @@ function EditConsole() {
               id="has_box"
               type="switch"
               value={console.has_box}
-              onChange={handleBoxedCheckbox}
+              onChange={toggleBoxedSwitch}
             ></Form.Check>
           </Form.Group>
         ) : (
@@ -141,7 +140,7 @@ function EditConsole() {
               id="has_box"
               type="switch"
               value={console.has_box}
-              onChange={handleBoxedCheckbox}
+              onChange={toggleBoxedSwitch}
             ></Form.Check>
           </Form.Group>
         )}
@@ -156,7 +155,7 @@ function EditConsole() {
               id="is_sealed"
               type="switch"
               value={console.is_sealed}
-              onChange={handleSealedCheckbox}
+              onChange={toggleSealedSwitch}
             ></Form.Check>
           </Form.Group>
         ) : (
@@ -168,7 +167,7 @@ function EditConsole() {
               id="is_sealed"
               type="switch"
               value={console.is_sealed}
-              onChange={handleSealedCheckbox}
+              onChange={toggleSealedSwitch}
             ></Form.Check>
           </Form.Group>
         )}

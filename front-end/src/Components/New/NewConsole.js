@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
-//import creationSound from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/mixkit-completion-of-a-level-2063.wav';
+import creationSound from '../../mixkit-completion-of-a-level-2063.wav';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -29,11 +29,11 @@ function NewConsole() {
     });
   };
 
-  // const playAudio = () => {
-  //   new Audio(creationSound).play();
-  // };
+  const playAudio = () => {
+    new Audio(creationSound).play();
+  };
 
-  const handleCheckbox = () => {
+  const toggleSwitch = () => {
     setConsole({
       ...console,
       has_box: !console.has_box,
@@ -46,7 +46,7 @@ function NewConsole() {
     axios
       .post(`${API}/consoles/new`, console)
       .then(() => {
-        // playAudio();
+        playAudio();
         navigate('/consoles');
       })
       .catch((err) => setError(err));
@@ -64,6 +64,7 @@ function NewConsole() {
             value={console.name}
             onChange={handleTextChange}
             placeholder="console name.."
+            required
           ></Form.Control>
         </Form.Group>
         <Form.Group>
@@ -74,6 +75,7 @@ function NewConsole() {
             value={console.brand}
             onChange={handleTextChange}
             placeholder="Nintendo, Sony, Microsoft, etc..."
+            required
           ></Form.Control>
         </Form.Group>
         <Form.Group>
@@ -84,6 +86,7 @@ function NewConsole() {
             value={console.color}
             onChange={handleTextChange}
             placeholder="Gray, Black, Green, Etc.."
+            required
           ></Form.Control>
         </Form.Group>
         <Form.Group>
@@ -110,18 +113,18 @@ function NewConsole() {
           <Form.Label htmlFor="has_box">Has Box?</Form.Label>
           <Form.Check
             id="has_box"
-            type="checkbox"
+            type="switch"
             value={console.has_box}
-            onChange={handleCheckbox}
+            onChange={toggleSwitch}
           ></Form.Check>
         </Form.Group>
         <Form.Group>
           <Form.Label htmlFor="is_sealed">Factory Sealed?</Form.Label>
           <Form.Check
             id="is-sealed"
-            type="checkbox"
+            type="switch"
             value={console.is_sealed}
-            onChange={handleCheckbox}
+            onChange={toggleSwitch}
           ></Form.Check>
         </Form.Group>
         <br />

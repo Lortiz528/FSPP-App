@@ -46,7 +46,7 @@ function EditAmiibo() {
     });
   };
 
-  const handleCheckbox = () => {
+  const toggleSwitch = () => {
     setAmiibo({ ...amiibo, is_boxed: !amiibo.is_boxed });
   };
 
@@ -88,27 +88,28 @@ function EditAmiibo() {
             name="series"
             value={amiibo.series}
             onChange={handleTextChange}
+            required
           />
         </Form.Group>
 
         {amiibo.is_boxed ? (
           <Form.Group>
-            <Form.Label htmlFor="is_boxed">Did You unbox this one?</Form.Label>
+            <Form.Label htmlFor="is_boxed">Did You unbox this one? Hit the Switch</Form.Label>
             <Form.Check
               id="is_boxed"
-              type="checkbox"
+              type="switch"
               value={amiibo.is_boxed}
-              onChange={handleCheckbox}
+              onChange={toggleSwitch}
             ></Form.Check>
           </Form.Group>
         ) : (
           <Form.Group>
-            <Form.Label htmlFor="is_boxed">Is it in Box?</Form.Label>
+            <Form.Label htmlFor="is_boxed">Is it in Box? Hit the Switch</Form.Label>
             <Form.Check
               id="is_boxed"
-              type="checkbox"
+              type="switch"
               value={amiibo.is_boxed}
-              onChange={handleCheckbox}
+              onChange={toggleSwitch}
             ></Form.Check>
           </Form.Group>
         )}
