@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
-import creationSound from '/Users/lortiz/Documents/dev/FSPP-App/front-end/src/mixkit-completion-of-a-level-2063.wav';
+import creationSound from '../../mixkit-completion-of-a-level-2063.wav';
 
 const API = process.env.REACT_APP_API_URL;
 const amiiboAPI = 'https://www.amiiboapi.com/api/amiibo/';
