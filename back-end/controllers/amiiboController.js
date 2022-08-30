@@ -9,7 +9,10 @@ const {
   deleteAmiibo,
 } = require('../queries/amiibos');
 
-const { capitalizeName } = require('../Validations/amiiboValidation');
+const {
+  capitalizeName,
+  checkValues,
+} = require('../Validations/amiiboValidation');
 
 //Index
 
@@ -34,7 +37,7 @@ amiibos.get('/:id', async (req, res) => {
 });
 
 //create
-amiibos.post('/new', async (req, res) => {
+amiibos.post('/new', checkValues, async (req, res) => {
   const newAmiibo = await createAmiibo(req.body);
   //console.log(newAmiibo);
   newAmiibo.name = capitalizeName(newAmiibo.name);
@@ -43,7 +46,7 @@ amiibos.post('/new', async (req, res) => {
 
 //update
 
-amiibos.put('/:id', async (req, res) => {
+amiibos.put('/:id',checkValues, async (req, res) => {
   const { id } = req.params;
   try {
     const updatedAmiibo = await updateAmiibo(id, req.body);
