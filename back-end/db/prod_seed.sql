@@ -65,18 +65,28 @@ INSERT INTO consoles (name, brand, quantity, color, has_box, is_sealed, image) V
 ('Playstation Vita', 'Sony', 1, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/PlayStation-Vita-1101-FL.jpg/484px-PlayStation-Vita-1101-FL.jpg'),
 ('Playstation Portable', 'Sony', 2, 'black', true, false, 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Psp-1000.jpg/390px-Psp-1000.jpg');
 
-INSERT INTO users (username, password, email, created_at) VALUES
-('test1', 'test1', 'test1@test.com', NOW()),
-('test2', 'test2', 'test2@test.com', NOW()),
-('test3', 'test3', 'test3@test.com', NOW());
+INSERT INTO locations (store_name, address, website, googleMapLink) VALUES 
+('VideoGamesNewYork', '202 East 6th St New York, NY 10003', 'https://videogamesnewyork.com/', 'https://www.google.com/maps/place/Videogamesnewyork/@40.728108,-73.9926377,17z/data=!4m13!1m7!3m6!1s0x89c2599b14912381:0xa951d8b8003c13d8!2s202+E+6th+St,+New+York,+NY+10003!3b1!8m2!3d40.728104!4d-73.990449!3m4!1s0x89c2599b13692597:0xb19d7a942a51dd8c!8m2!3d40.7281099!4d-73.9904475?hl=en'),
+('Brooklyn Games & Arcade', '6120 4th Ave, Brooklyn, NY 11220', 'https://www.ebay.com/str/brooklynvideogames', 'https://www.google.com/maps/place/Brooklyn+Games+%26+Arcade/@40.6399995,-74.0219175,17z/data=!4m13!1m7!3m6!1s0x89c24552933806d7:0x9fcbcd6b9f77e385!2s6120+4th+Ave,+Brooklyn,+NY+11220!3b1!8m2!3d40.6399955!4d-74.0197288!3m4!1s0x89c24539d464ffb7:0xf0a8e55702c064ac!8m2!3d40.6399955!4d-74.0197288?hl=en'),
+('Brooklyn Video Games', '6801 20th Ave, Brooklyn, NY 11204', 'https://www.ebay.com/str/brooklynvideogames', 'https://www.google.com/maps/place/Brooklyn+Video+Games/@40.6145709,-73.989714,17z/data=!4m13!1m7!3m6!1s0x89c2451ede46184d:0x53fada112e9d67ee!2s6801+20th+Ave,+Brooklyn,+NY+11204!3b1!8m2!3d40.6145668!4d-73.9875253!3m4!1s0x89c24522711d49f9:0x17b9655c1edfe5b7!8m2!3d40.614596!4d-73.9875271?hl=en'),
+('Brooklyn Game Shack', '503 84th St, Brooklyn, NY 11209', 'https://www.instagram.com/brooklyngameshack/?hl=en','https://www.google.com/maps/place/Brooklyn+Game+Shack/@40.6228235,-74.0272205,17z/data=!4m13!1m7!3m6!1s0x89c2455e1b8b86db:0x678a9c87f469ffe0!2s503+84th+St,+Brooklyn,+NY+11209!3b1!8m2!3d40.6228194!4d-74.0250318!3m4!1s0x89c245b151eb3b4f:0xca3d5755f97a8e90!8m2!3d40.6228264!4d-74.0250244?hl=en'),
 
-INSERT INTO userAmiibos (userID, name, series, is_boxed, quantity, image) VALUES
-(1, 'Zero Suit Samus', 'Super Smash Bros.', true, 2, 'https://m.media-amazon.com/images/I/718yXWH-TrL._SX342_.jpg'),
-(2, 'Mario - Gold Edition', 'Super Mario', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000000-003c0102.png'),
-(3, 'Palutena', 'Super Smash Bros.', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_07420000-001f0002.png'),
-(1, 'Pit', 'Super Smash Bros.', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_07400000-00100002.png'),
-(2, 'Ike', 'Super Smash Bros.', false, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_21010000-00180002.png'),
-(3, 'Resetti', 'Animal Crossing', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_018e0000-02490502.png');
+('Retros', '2978 Brunswick Pike, Lawrence Township, NJ 08648', 'https://www.retrosnj.com/', 'https://www.google.com/maps/place/Retros+(+Video+Games.+Movies,+Music+%26+Electronics+)/@40.2755328,-74.7073605,17z/data=!4m13!1m7!3m6!1s0x89c3e2143b0a9eef:0x8ae7c71d4c68c01b!2s2978+Brunswick+Pike,+Lawrence+Township,+NJ+08648!3b1!8m2!3d40.2755287!4d-74.7051718!3m4!1s0x89c3c869585f1605:0x8034be6d7259328!8m2!3d40.2755558!4d-74.7052209?hl=en'),
+('Classic Game Junkie', '111 S Easton Rd, Glenside, PA 19038', 'https://classicgamejunkie.com/', 'https://www.google.com/maps/place/Classic+Game+Junkie/@40.1001691,-75.1557463,17z/data=!4m13!1m7!3m6!1s0x89c6b09fc5b54325:0x8da7d5d82e801729!2s111+S+Easton+Rd,+Glenside,+PA+19038!3b1!8m2!3d40.100165!4d-75.1535576!3m4!1s0x89c6b09fc531953f:0x4093a72dbe9cd0a6!8m2!3d40.1002347!4d-75.1536385?hl=en'),
+('Game N Dvd Exchange', '23 E State St, Media, PA 19063', 'https://www.gamendvd.com/', 'https://www.google.com/maps/place/Game+N+Dvd+Exchange/@39.9180773,-75.3906559,17z/data=!4m13!1m7!3m6!1s0x89c6e90807ed5e01:0x36865563c000cd23!2s23+E+State+St,+Media,+PA+19063!3b1!8m2!3d39.9180732!4d-75.3884672!3m4!1s0x89c6c1f1422941e1:0xb9b6c33a9958c0fc!8m2!3d39.9179936!4d-75.388487?hl=en');
+
+-- INSERT INTO users (username, password, email, created_at) VALUES
+-- ('test1', 'test1', 'test1@test.com', NOW()),
+-- ('test2', 'test2', 'test2@test.com', NOW()),
+-- ('test3', 'test3', 'test3@test.com', NOW());
+
+-- INSERT INTO userAmiibos (userID, name, series, is_boxed, quantity, image) VALUES
+-- (1, 'Zero Suit Samus', 'Super Smash Bros.', true, 2, 'https://m.media-amazon.com/images/I/718yXWH-TrL._SX342_.jpg'),
+-- (2, 'Mario - Gold Edition', 'Super Mario', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000000-003c0102.png'),
+-- (3, 'Palutena', 'Super Smash Bros.', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_07420000-001f0002.png'),
+-- (1, 'Pit', 'Super Smash Bros.', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_07400000-00100002.png'),
+-- (2, 'Ike', 'Super Smash Bros.', false, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_21010000-00180002.png'),
+-- (3, 'Resetti', 'Animal Crossing', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_018e0000-02490502.png');
 
 -- use advanced image search to choose images that are square (aspect ratio)
 -- https://www.google.com/advanced_image_search

@@ -7,10 +7,12 @@ function AmiiboIndex() {
   return (
     <div>
       <h1>Amiibos Collection</h1>
-      
+      <Button variant='light'>
         <Link to='/amiibos/new'>
-        Create New Amiibo
+         Add Amiibo to Your Collection
         </Link>
+        </Button>
+        
       
       <Amiibos />
     </div>

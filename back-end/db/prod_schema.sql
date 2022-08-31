@@ -29,6 +29,14 @@ CREATE TABLE consoles (
     is_sealed BOOLEAN,
     image TEXT
 );
+DROP TABLE IF EXISTS locations;
+CREATE TABLE locations (
+    id SERIAL NOT NULL PRIMARY KEY,
+    store_name TEXT NOT NULL,
+    address TEXT NOT NULL,
+    website TEXT,
+    googleMapLink TEXT
+)
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
