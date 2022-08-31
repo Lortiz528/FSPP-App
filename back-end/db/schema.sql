@@ -35,7 +35,8 @@ CREATE TABLE locations (
     store_name TEXT NOT NULL,
     address TEXT NOT NULL,
     website TEXT,
-    googleMapLink TEXT
+    googleMapLink TEXT,
+    image TEXT
 );
 
 -- CREATE TABLE users (

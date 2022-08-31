@@ -5,6 +5,7 @@ const cors = require('cors');
 const amiiboController = require('./controllers/amiiboController');
 const collectionsController = require('./controllers/collectionsController');
 const consoleController = require('./controllers/consoleController');
+const locationsController = require('./controllers/locationController');
 
 // CONFIGURATION
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use('/amiibos', amiiboController);
 app.use('/collections', collectionsController);
 app.use('/consoles', consoleController);
+app.use('/locations', locationsController);
 
 // ROUTES
 app.get('/', (req, res) => {

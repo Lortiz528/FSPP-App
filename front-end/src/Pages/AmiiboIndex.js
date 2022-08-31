@@ -12,6 +12,10 @@ function AmiiboIndex() {
          Add Amiibo to Your Collection
         </Link>
         </Button>
+        <br/>
+        <button>
+          <a href='https://www.mercari.com/search/?keyword=amiibo' >Shop for More</a>
+        </button>
         
       
       <Amiibos />

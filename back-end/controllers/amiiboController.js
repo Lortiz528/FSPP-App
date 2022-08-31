@@ -46,7 +46,7 @@ amiibos.post('/new', checkValues, async (req, res) => {
 
 //update
 
-amiibos.put('/:id',checkValues, async (req, res) => {
+amiibos.put('/:id', checkValues, async (req, res) => {
   const { id } = req.params;
   try {
     const updatedAmiibo = await updateAmiibo(id, req.body);
@@ -61,9 +61,9 @@ amiibos.put('/:id',checkValues, async (req, res) => {
 
 amiibos.delete('/:id', async (req, res) => {
   const { id } = req.params;
-  const deletedSong = await deleteAmiibo(id);
-  if (deletedSong) {
-    res.status(200).json(deletedSong);
+  const deletedAmiibo = await deleteAmiibo(id);
+  if (deletedAmiibo) {
+    res.status(200).json(deletedAmiibo);
   } else {
     console.log(error.message || error);
     res.status(500).json({ error: 'deletion error' });

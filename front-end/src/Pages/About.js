@@ -1,7 +1,12 @@
+
+
 export default function About() {
+
   return (
     <div className="aboutpage">
-      <h2>About Me</h2>
+      <h2>Thanks for Visiting!</h2>
+
+      <h3><a href="https://github.com/Lortiz528/FSPP-App" >Github Repo Here</a></h3>
       <hr></hr>
       <div>
         <h3>Luis Ortiz</h3>
@@ -16,7 +21,7 @@ export default function About() {
           exploration, and baseball.
           <br />
           <br />
-           Talk to me about: 
+       Talk to me about:
         </p>
         <ul className="bioList">
           <li>The Mets!</li>
