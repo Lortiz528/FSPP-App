@@ -13,7 +13,7 @@ this is an app to maintain various collections such as retro video games, consol
 - [ERD]()
 - [Wireframes]()
 
-##If you'd like to run my project locally, please read the following steps:
+## If you'd like to run my project locally, please read the following steps:
 
 ### Frontend Setup
 
