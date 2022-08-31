@@ -4,8 +4,11 @@ this is an app to maintain various collections such as retro video games, consol
 
 ## Important Links
 
-- [Deployed API Server]()
-- [Deployed frontend]()
+- [Deployed frontend](https://my-collections.netlify.app/)
+- [Deployed API Server](https://immense-refuge-16416.herokuapp.com/)
+
+## App planning resources 
+
 - [Trello Board](https://trello.com/invite/b/ABTWrZXr/af5e35ff4cbe5df2caec988fc6eac12d/fspp-inventory-app)
 - [ERD]()
 - [Wireframes]()
