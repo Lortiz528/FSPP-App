@@ -6,7 +6,7 @@ INSERT INTO amiibos (name, series, is_boxed, quantity, image) VALUES
 ('Palutena', 'Super Smash Bros.', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_07420000-001f0002.png'),
 ('Link - Link''s Awakening', 'Legend Of Zelda', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01000000-03990902.png'),
 ('Pit', 'Super Smash Bros.', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_07400000-00100002.png'),
-('Celica', 'Fire Emblem', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01060000-03590902.png'),
+('Celica', 'Fire Emblem', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_21070000-03611202.png'),
 ('Ike', 'Super Smash Bros.', false, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_21010000-00180002.png'),
 ('Resetti', 'Animal Crossing', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_018e0000-02490502.png'),
 ('Rover', 'Animal Crossing', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_018d0000-024c0502.png'),
@@ -23,7 +23,7 @@ INSERT INTO amiibos (name, series, is_boxed, quantity, image) VALUES
 ('Wii Fit Trainer', 'Super Smash Bros.', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_07000000-00070002.png'),
 ('Wario', 'Super Smash Bros.', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00070000-001a0002.png'),
 ('Greninja', 'Super Smash Bros.', true, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_1b920000-00250002.png'),
-('Tiki', 'Fire Emblem', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01060000-03590902.png'),
+('Tiki', 'Fire Emblem', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_21090000-03701202.png'),
 ('Rosalina', 'Super Mario Bros.', true, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00040000-02620102.png'),
 ('Fox', 'Super Smash Bros.', false, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_05800000-00050002.png'),
 ('Meta Knight', 'Super Smash Bros.', true, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_1f010000-00270002.png'),
@@ -34,8 +34,8 @@ INSERT INTO amiibos (name, series, is_boxed, quantity, image) VALUES
 ('Squirtle', 'Super Smash Bros.', true, 2, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_19070000-03840002.png'),
 ('Toon Link', 'Super Smash Bros.', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01000100-00160002.png'),
 ('Urbosa', 'Legend Of Zelda', true, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01060000-03590902.png'),
-('Alm', 'Fire Emblem', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01060000-03590902.png'),
-('Chrom', 'Fire Emblem', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_01060000-03590902.png');
+('Alm', 'Fire Emblem', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_21060000-03601202.png'),
+('Chrom', 'Fire Emblem', false, 1, 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_21080000-036f1202.png');
 
 INSERT INTO collections (name, image) VALUES ('Amiibos', 'https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000000-00000002.png'),
 ('Consoles', 'https://wallpaperaccess.com/full/2520803.jpg');
