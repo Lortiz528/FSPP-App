@@ -5,10 +5,18 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/">Go Home</Link>
-      <Link to="/collections">Collections</Link>
-      <Link to="/locations">Locations</Link>
-      <Link to="/about" >About</Link>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        Go Home
+      </Link>
+      <Link to="/collections" style={{ textDecoration: 'none' }}>
+        Collections
+      </Link>
+      <Link to="/locations" style={{ textDecoration: 'none' }}>
+        Locations
+      </Link>
+      <Link to="/about" style={{ textDecoration: 'none' }}>
+        About
+      </Link>
     </nav>
   );
 }

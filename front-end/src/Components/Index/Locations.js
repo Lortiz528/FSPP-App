@@ -17,7 +17,7 @@ function Locations() {
       <header className="locationHeader">
         <h1>*Find your Treasure at These Spots*</h1>
         <h2>
-          <Link to="/locations/new">Add a Location</Link>
+          <Link to="/locations/new" style={{ textDecoration: 'none' }}>Add a Location</Link>
         </h2>
       </header>
       <br />

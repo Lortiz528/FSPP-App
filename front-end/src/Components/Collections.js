@@ -15,9 +15,9 @@ function Collections() {
 
   const collectionCards = collections.map((collection) => {
     return (
-      <div key={collection.id}>
+      <div className='collectcard' key={collection.id}>
         <h2>{collection.name}</h2>
-        <Link to={`/${collection.name}`}>
+        <Link to={`/${collection.name}`} >
         <img src={collection.image} alt={collection.name} />
         </Link>
       </div>

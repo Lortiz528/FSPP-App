@@ -44,7 +44,7 @@ const ShowLocation = () => {
           Address: {location.address}
         </h5>
         <h5>
-          <a href={location.website}>Store Website</a>
+          <a href={location.website} style={{ textDecoration: 'none' }}>Store Website</a>
         </h5>
         <h5><a href={location.googlemaplink}>Google Map It!</a></h5>
       </div>

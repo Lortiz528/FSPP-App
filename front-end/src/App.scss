@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #e0e1dd;
+  // height: 100vh;
+}
+
+
+.collectionCards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 50px;
+  //border: 10px solid #778da9;
+  //box-shadow: 10px 5px 5px #052a52;
+  // margin-left:50px;
+  // margin-right: 50px;
+  color: #052a52;
+
+}
+.collectionCards img{
+  height: 350px;
+  border-radius: 50px;
+}
+
+.collectcard{
+  text-align: center;
+}
+
+.routeSection{
+  width: 100%;
+    
+}
+
+a{
+  text-decoration: none;
+}

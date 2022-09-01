@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 
 //pages
@@ -8,7 +8,6 @@ import AmiiboEdit from './Pages/AmiiboEdit';
 import AmiiboIndex from './Pages/AmiiboIndex';
 import AmiiboShow from './Pages/AmiiboShow';
 import FourOFour from './Pages/FourOFour';
-
 import ConsoleIndex from './Pages/ConsoleIndex';
 import ConsoleShow from './Pages/ConsoleShow';
 import ConsoleNew from './Pages/ConsoleNew';
@@ -28,10 +27,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <section>
+      <section className='routeSection'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/collections" element={<Collections />} />
+
           <Route path="/amiibos" element={<AmiiboIndex />} />
           <Route path="/amiibos/new" element={<AmiiboNew />} />
           <Route path="/amiibos/:id" element={<AmiiboShow />} />
@@ -46,6 +46,7 @@ function App() {
           <Route path="/locations/new" element={<NewLocation />} />
           <Route path="/locations/:id" element={<ShowLocation />} />
           <Route path="/locations/:id/edit" element={<EditLocation />} />
+
           <Route path="/About" element={<About />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>

@@ -2,20 +2,15 @@ import './amiiboIndex.scss';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-//import { Button } from 'react-bootstrap';
 
 const API = process.env.REACT_APP_API_URL;
 
 function Amiibos() {
-  // const API = process.env.REACT_APP_API_URL;
-
   const [amiibos, setAmiibos] = useState([]);
-  //const [sortedAmiibos, setSortedAmiibos] = useState([]);
 
   useEffect(() => {
     axios.get(`${API}/amiibos`).then((res) => {
-      //setSortedAmiibos(res.data);
-      setAmiibos(res.data)
+      setAmiibos(res.data);
     });
   }, []);
 
@@ -34,14 +29,6 @@ function Amiibos() {
 
   return (
     <div className="amiibos">
-      {/* <div className="sort-buttons">
-        <button onClick={() => sortName(sortedAmiibos, 'name')}>
-          Sort by Amiibo Name
-        </button>
-        <button onClick={() => sortName(sortedAmiibos, 'series')}>
-          Sort by Amiibo Series
-        </button>
-      </div> */}
       <section className="amiibo">
         {amiibos.map((amiibo) => (
           <div key={amiibo.id} className="amiiboCard">
