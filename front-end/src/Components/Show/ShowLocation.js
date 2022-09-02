@@ -1,3 +1,4 @@
+import './showlocation.scss';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
@@ -39,29 +40,44 @@ const ShowLocation = () => {
 
       <div className="locationStats">
         <h2>{location.store_name}</h2>
-        <img src={location.image}/>
-        <h5>
-          Address: {location.address}
-        </h5>
-        <h5>
-          <a href={location.website} style={{ textDecoration: 'none' }}>Store Website</a>
-        </h5>
-        <h5><a href={location.googlemaplink}>Google Map It!</a></h5>
+
+        {location.image ? (
+          <img src={location.image} />
+        ) : (
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png?20210219185637" />
+        )}
+        <h5>Address: {location.address}</h5>
+        {location.website ? (
+          <h5>
+            <a href={location.website} style={{ textDecoration: 'none' }}>
+              Store Website
+            </a>
+          </h5>
+        ) : (
+          <p>no website entered yet!</p>
+        )}
+        {location.googlemaplink ? (
+          <h5>
+            <a href={location.googlemaplink} style={{ textDecoration: 'none' }}>
+              Google Map It!
+            </a>
+          </h5>
+        ) : (
+          <p>No google map link entered yet!</p>
+        )}
       </div>
 
-      
-        <Link to="/locations">
-          <Button variant="primary">Back</Button>
-        </Link>
-        <Link to={`/locations/${id}/edit`}>
-          <Button variant="warning">Edit</Button>
-        </Link>
-        <div>
-          <Button variant="danger" onClick={handleDelete}>
-            Delete
-          </Button>
-        </div>
-   
+      <Link to="/locations">
+        <Button variant="primary">Back</Button>
+      </Link>
+      <Link to={`/locations/${id}/edit`}>
+        <Button variant="warning">Edit</Button>
+      </Link>
+      <div>
+        <Button variant="danger" onClick={handleDelete}>
+          Delete
+        </Button>
+      </div>
     </article>
   );
 };
