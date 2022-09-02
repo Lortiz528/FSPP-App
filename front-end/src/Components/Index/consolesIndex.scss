@@ -2,11 +2,50 @@
     width: 150px;
 }
 
+.consoles{
+    margin: 5%;
+}
 .console{
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 10px;
-    width: 150px;
     padding: 1em;
-    // background-color: rgb(255, 252, 242);
+    background-color:white;
   }
+
+  .consoleCard{
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width:1550px) {
+    .console{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    //   gap: 10px;
+    //   padding: 1em;
+   
+    }
+  }
+    
+    @media (max-width:1200px) {
+        .console {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+    @media (max-width:600px) {
+        .console {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width:420px) {
+        .console {
+        display: grid;
+        grid-template-columns: auto;
+      }
+    }

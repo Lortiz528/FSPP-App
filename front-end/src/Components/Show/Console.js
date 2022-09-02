@@ -43,10 +43,21 @@ const Console = () => {
           {console.brand} {console.name}
         </h2>
         <img src={console.image} alt={console.name} />
-        <h5>Color: {console.color}</h5>
-        <h5>Quantity in collection: {console.quantity}</h5>
-        <h5>Has Box? {console.has_box ? 'True' : 'False'}</h5>
-        <h5>Factory Sealed? {console.is_sealed ? 'True' : 'False'}</h5>
+
+        <h5>
+          <strong>Color:</strong> {console.color}
+        </h5>
+        <h5>
+          <strong>Quantity in collection:</strong> {console.quantity}
+        </h5>
+        <h5>
+          <strong>Has Box? </strong>
+          {console.has_box ? 'True' : 'False'}
+        </h5>
+        <h5>
+          <strong>Factory Sealed? </strong>
+          {console.is_sealed ? 'True' : 'False'}
+        </h5>
       </div>
 
       <div className="consoleNav">

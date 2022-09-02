@@ -109,7 +109,7 @@ function NewAmiibo() {
   });
 
   return (
-    <div>
+    <div className="addNewPage">
       <section className="newAmiiboFormSection">
         <h1>Add Amiibo</h1>
         <Form onSubmit={handleSubmit} className="newForm">
@@ -169,26 +169,29 @@ function NewAmiibo() {
             Submit
           </Button>
         </Form>
+        <br />
+        <Button className="gobackbtn" variant="primary">
+          <Link to="/amiibos">Go Back</Link>
+        </Button>
+        <br></br>
       </section>
-      <br />
-      <Link to="/amiibos">Go Back</Link>
-      <br />
-      <br />
-      <Button onClick={handleAmiiboFetchButton}>
-        {display ? 'Hide Amiiboo Roster' : 'Show Amiibo Roster'}
-      </Button>
-      {error && <p>{error}</p>}
-      {display ? (
-        <div>
-          <br />
-          <h3 className="clickInstructions">
-            Auto-Fill the form by clicking on an amiibos name, series, and
-            Image!
-          </h3>
-          <br />
-          <div className="amiiboImageCard">{amiiboCards}</div>
-        </div>
-      ) : null}
+      <div className="rosterPlay">
+        <Button onClick={handleAmiiboFetchButton}>
+          {display ? 'Hide Amiiboo Roster' : 'Show Amiibo Roster'}
+        </Button>
+        {error && <p>{error}</p>}
+        {display ? (
+          <div>
+            <br />
+            <h3 className="clickInstructions">
+              Auto-Fill the form by clicking on an amiibos name, series, and
+              Image!
+            </h3>
+            <br />
+            <div className="amiiboImageCard">{amiiboCards}</div>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }

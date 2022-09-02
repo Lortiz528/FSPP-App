@@ -1,6 +1,6 @@
+import './collections.scss'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 
 function Collections() {
@@ -16,7 +16,7 @@ function Collections() {
   const collectionCards = collections.map((collection) => {
     return (
       <div className='collectcard' key={collection.id}>
-        <h2>{collection.name}</h2>
+        <h2><strong>{collection.name}</strong></h2>
         <Link to={`/${collection.name}`} >
         <img src={collection.image} alt={collection.name} />
         </Link>

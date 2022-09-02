@@ -25,8 +25,8 @@ function Consoles() {
                 alt={console.name}
                 className="consoleImage"
               />
-              <h4>{console.name}</h4>
             </Link>
+            <h4>{console.name}</h4>
           </div>
         ))}
       </section>

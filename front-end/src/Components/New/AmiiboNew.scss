@@ -1,3 +1,8 @@
+.addNewPage{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
 .amiiboImageCard img{
     width: 150px;
     cursor: pointer;
@@ -5,13 +10,16 @@
 }
 
 .amiiboImageCard img:hover{
-    width: 300px;
-    
+    width: 200px;  
+}
+.gobackbtn a{
+    color: white;
+    text-decoration: none;
 }
 
 .amiiboImageCard{
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     // border: 3px solid black;
     // border-radius: 15px;
 }
@@ -26,23 +34,67 @@
     border: 1px solid darkblue;
     border-radius: 15px;
     margin-top: 5%;
-    background-color: bisque;
+    background-color: beige;
     cursor: pointer; 
 }
 
 .rosterSeries{
     border: 1px solid darkblue;
     border-radius: 15px;
-    background-color: bisque;
+    background-color: beige;
     cursor: pointer;
 }
 
 .newAmiiboFormSection{
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  padding: 20px; 
-  
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    //position: fixed;
+    // width: 100%;
+height: 125vh;
+top: 5%;
+position: -webkit-sticky;
+position: sticky;
 }
+
+.clickInstructions{
+    border: 3px solid ;
+    background-color: beige;
+}
+
+@media (max-width:1500px) {
+    .amiiboImageCard {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width:1000px) {
+    .amiiboImageCard {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:450px) {
+    .amiiboImageCard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:300px) {
+    .amiiboImageCard {
+        display: grid;
+        grid-template-columns:auto;
+    }
+}
+
+
+
+// width: 100%;
+// height: 125vh;
+// top: 5%;
+// position: -webkit-sticky;
+// position: sticky;

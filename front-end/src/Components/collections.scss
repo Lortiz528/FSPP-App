@@ -1,0 +1,42 @@
+.collectionCards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 50px;
+    border: 10px solid #778da9;
+    box-shadow: 10px 5px 5px #052a52;
+    margin-left:10%;
+    margin-right: 10%;
+    color: #052a52;
+    margin-bottom:  5%; ;
+  
+  }
+  .collectionCards img{
+    height: 350px;
+    border-radius: 50px;
+  }
+  
+  .collectcard{
+    text-align: center;
+  }
+
+  @media (max-width:600px) {
+    .collectionCards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .collectionCards img{
+        height: 300px;
+        border-radius: 50px;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .collectionCards {
+        border: none;
+        box-shadow: none;
+    }
+    .collectionCards img{
+        height: 200px;
+        border-radius: 50px;
+      }
+  }

@@ -39,14 +39,14 @@ const Amiibo = () => {
       {error && <p className="error">{error}</p>}
 
       <div className="amiiboStats">
-        <h2>{amiibo.name}</h2>
+        <h1>{amiibo.name}</h1>
         <img src={amiibo.image} alt={amiibo.name} />
-        <h5>Series: {amiibo.series}</h5>
-        <h5>Boxed? {amiibo.is_boxed ? 'True' : 'False'}</h5>
-        <h5>Quantity: {amiibo.quantity}</h5>
+        <h5><strong>Series:</strong> {amiibo.series}</h5>
+        <h5><strong>Boxed?</strong> {amiibo.is_boxed ? 'True' : 'False'}</h5>
+        <h5><strong>Quantity in Collection:</strong> {amiibo.quantity}</h5>
       </div>
 
-      <div className="nav">
+      
         <Link to="/amiibos">
           <Button variant="primary">Back</Button>
         </Link>
@@ -58,7 +58,7 @@ const Amiibo = () => {
             Delete
           </Button>
         </div>
-      </div>
+     
     </article>
   );
 };
