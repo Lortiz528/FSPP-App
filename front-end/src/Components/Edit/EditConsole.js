@@ -75,7 +75,7 @@ function EditConsole() {
   };
 
   return (
-    <section>
+    <section className='editConsoleForm'>
       {/* <ToastContainer /> */}
       <h1>Edit console</h1>
       <Form onSubmit={handleSubmit}>
