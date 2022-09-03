@@ -17,8 +17,11 @@ const ShowLocation = () => {
     axios
       .get(`${API}/locations/${id}`)
       .then((res) => setLocation(res.data))
-      .catch((err) => setError(err));
-  }, [id]);
+      .catch((err) => {
+        setError(err);
+        navigate('/*');
+      });
+  }, [id, navigate]);
 
   const playAudio = () => {
     new Audio(deleteSound).play();
@@ -42,9 +45,12 @@ const ShowLocation = () => {
         <h2>{location.store_name}</h2>
 
         {location.image ? (
-          <img src={location.image} />
+          <img src={location.image} alt={location.store_name} />
         ) : (
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png?20210219185637" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png?20210219185637"
+            alt="none found"
+          />
         )}
         <h5>Address: {location.address}</h5>
         {location.website ? (

@@ -17,8 +17,11 @@ const Console = () => {
     axios
       .get(`${API}/consoles/${id}`)
       .then((res) => setConsole(res.data))
-      .catch((err) => setError(err));
-  }, [id]);
+      .catch((err) => {
+        setError(err);
+        navigate('/*')
+      });
+  }, [id, navigate]);
 
   const handleDelete = () => {
     axios
@@ -27,7 +30,10 @@ const Console = () => {
         playAudio();
         navigate('/consoles');
       })
-      .catch((err) => setError(err));
+      .catch((err) => {
+        setError(err);
+        navigate('/*')
+      });
   };
 
   const playAudio = () => {

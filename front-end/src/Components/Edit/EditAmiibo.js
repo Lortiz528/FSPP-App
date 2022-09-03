@@ -28,9 +28,10 @@ function EditAmiibo() {
         setAmiibo(res.data);
       })
       .catch((err) => {
-        setError(err.message);
+        setError(err);
+        navigate('/*')
       });
-  }, [id]);
+  }, [id, navigate]);
 
   //sounds
   //https://stackoverflow.com/questions/54114171/how-to-play-an-mp3-once-onclick-in-react

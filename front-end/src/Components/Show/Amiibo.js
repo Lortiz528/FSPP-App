@@ -17,8 +17,11 @@ const Amiibo = () => {
     axios
       .get(`${API}/amiibos/${id}`)
       .then((res) => setAmiibo(res.data))
-      .catch((err) => setError(err));
-  }, [id]);
+      .catch((err) => {
+        setError(err);
+        navigate('/*')
+      });
+  }, [id, navigate]);
 
   const playAudio = () => {
     new Audio(deleteSound).play();

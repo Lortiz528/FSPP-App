@@ -22,7 +22,7 @@ const checkValues = (req, res, next) => {
       req.body.quantity === '' ||
       req.body.quantity === undefined ||
       req.body.quantity === null ||
-      req.body.quantity < 0
+      req.body.quantity <= 0
     ) {
       req.body.quantity = 1;
     }
@@ -30,7 +30,7 @@ const checkValues = (req, res, next) => {
   } else {
     res.status(400).json({
       error:
-        'You are missing required keys. Please make sure you have: name, quantity, series, is_boxed, and image along with their appropriate values.',
+        'You are missing required keys. Please make sure you have: name, quantity, series, boxed status, and image along with their appropriate values.',
     });
   }
 };

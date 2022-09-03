@@ -30,9 +30,10 @@ function EditConsole() {
         setconsole(res.data);
       })
       .catch((err) => {
-        setError(err.message);
+        setError(err);
+        navigate('/*')
       });
-  }, [id]);
+  }, [id, navigate]);
 
   const playAudio = () => {
     new Audio(success).play();
