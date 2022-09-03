@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
 import creationSound from '../../mixkit-completion-of-a-level-2063.wav';
 
 const API = process.env.REACT_APP_API_URL;
@@ -60,9 +61,38 @@ function NewAmiibo() {
       .post(`${API}/amiibos/new`, amiibo)
       .then(() => {
         playAudio();
-        navigate('/amiibos');
+        notify();
       })
-      .catch((err) => setError(err));
+      .catch((err) => {
+        setError(err);
+        toast.error('Error updating Amiibo!', {
+          position: 'top-right',
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          pauseOnFocusLoss: false,
+          draggable: true,
+          progress: undefined,
+        });
+      });
+  };
+
+  const notify = () => {
+    toast.success(
+      'Amiibo has been Added to your Collection! \n You will be redirected in 2 seconds.',
+      {
+        position: 'top-center',
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        pauseOnFocusLoss: false,
+        draggable: true,
+        progress: undefined,
+      }
+    );
+    setTimeout(() => {
+      navigate('/amiibos');
+    }, 3100);
   };
 
   const amiiboImageFillForm = (e) => {
@@ -192,6 +222,7 @@ function NewAmiibo() {
           </div>
         ) : null}
       </div>
+      <ToastContainer autoClose={2000} theme="dark" />
     </div>
   );
 }

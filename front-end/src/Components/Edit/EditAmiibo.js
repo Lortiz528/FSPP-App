@@ -2,9 +2,9 @@ import './AmiiboEdit.scss';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-//import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import success from '../../mixkit-player-boost-recharging-2040.wav'
+import success from '../../mixkit-player-boost-recharging-2040.wav';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -56,18 +56,42 @@ function EditAmiibo() {
     axios
       .put(`${API}/amiibos/${id}`, amiibo)
       .then((res) => {
-         playAudio();
-        navigate('/amiibos');
-        // toast.success("Snack updated successfully!");
+        playAudio();
+        notify();
       })
       .catch((err) => {
-        // toast.error("Error updating snack!");
+        toast.error('Error updating Amiibo!', {
+          position: 'top-right',
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          pauseOnFocusLoss: false,
+          draggable: true,
+          progress: undefined,
+        });
       });
+  };
+
+  const notify = () => {
+    toast.success(
+      'Amiibo has been Updated! \n You will be redirected in 2 seconds.',
+      {
+        position: 'top-center',
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        pauseOnFocusLoss: false,
+        draggable: true,
+        progress: undefined,
+      }
+    );
+    setTimeout(() => {
+      navigate('/amiibos');
+    }, 3100);
   };
 
   return (
     <section className="editAmiiboForm">
-      {/* <ToastContainer /> */}
       <h1>Edit Amiibo</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name">
@@ -94,7 +118,9 @@ function EditAmiibo() {
 
         {amiibo.is_boxed ? (
           <Form.Group>
-            <Form.Label htmlFor="is_boxed">Did You unbox this one? Hit the Switch</Form.Label>
+            <Form.Label htmlFor="is_boxed">
+              Did You unbox this one? Hit the Switch
+            </Form.Label>
             <Form.Check
               id="is_boxed"
               type="switch"
@@ -104,7 +130,9 @@ function EditAmiibo() {
           </Form.Group>
         ) : (
           <Form.Group>
-            <Form.Label htmlFor="is_boxed">Is it in Box? Hit the Switch</Form.Label>
+            <Form.Label htmlFor="is_boxed">
+              Is it in Box? Hit the Switch
+            </Form.Label>
             <Form.Check
               id="is_boxed"
               type="switch"
@@ -145,6 +173,7 @@ function EditAmiibo() {
         <Link to="/amiibos">Go Back</Link>
       </button>
       {error && <p>{error}</p>}
+      <ToastContainer autoClose={2000} theme="dark" />
     </section>
   );
 }

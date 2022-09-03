@@ -1,9 +1,16 @@
 .fourfour{
-
+    height: 100vh;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-lVdWeNp6IIE2G2lMa4os5MW1m4kbDnMt6t6_b70NPRfLgmNlASMRC9ddOOJv--NEfoA&usqp=CAU');
    
     background-size: contain;
-    // background-repeat: no-repeat;
-    // justify-content: center;
+     //background-repeat: no-repeat;
+     //justify-content: center;
+     
    
 }
+
+.fourfour a{
+    color: white;
+    text-decoration: none;
+}
+

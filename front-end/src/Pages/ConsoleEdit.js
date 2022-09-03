@@ -1,9 +1,9 @@
 import EditConsole from '../Components/Edit/EditConsole';
 
-function ConsoleEdit() {
+function ConsoleEdit({ notify }) {
   return (
     <div className="New Edit">
-      <EditConsole />
+      <EditConsole notify={notify} />
     </div>
   );
 }

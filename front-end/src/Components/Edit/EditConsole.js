@@ -2,7 +2,7 @@ import './ConsoleEdit.scss';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-//import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import success from '../../mixkit-player-boost-recharging-2040.wav';
 
@@ -66,17 +66,41 @@ function EditConsole() {
       .put(`${API}/consoles/${id}`, console)
       .then((res) => {
         playAudio();
-        navigate('/consoles');
-        // toast.success("Snack updated successfully!");
+        notify();
       })
       .catch((err) => {
-        // toast.error("Error updating snack!");
+        toast.error('Error updating Console!', {
+          position: 'top-right',
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          pauseOnFocusLoss: false,
+          draggable: true,
+          progress: undefined,
+        });
       });
+  };
+
+  const notify = () => {
+    toast.success(
+      'Console has been Updated! \n You will be redirected in 2 seconds.',
+      {
+        position: 'top-center',
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        pauseOnFocusLoss: false,
+        draggable: true,
+        progress: undefined,
+      }
+    );
+    setTimeout(() => {
+      navigate('/consoles');
+    }, 4100);
   };
 
   return (
     <section className="editConsoleForm">
-      {/* <ToastContainer /> */}
       <h1>Edit console</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name">
@@ -185,6 +209,7 @@ function EditConsole() {
         <Button> Cancel</Button>
       </Link>
       {error && <p>{error}</p>}
+      <ToastContainer autoClose={2000} theme="dark" />
     </section>
   );
 }

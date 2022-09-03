@@ -22,12 +22,11 @@ import ShowLocation from './Components/Show/ShowLocation';
 import EditLocation from './Components/Edit/EditLocation';
 import Locations from './Components/Index/Locations';
 
-
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <section className='routeSection'>
+      <section className="routeSection">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/collections" element={<Collections />} />

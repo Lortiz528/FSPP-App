@@ -1,0 +1,28 @@
+.profile{
+    border-radius: 50%;
+    height: 200px;
+}
+
+.aboutpage a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.resources{
+    
+    border-radius: 50%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.bio{
+    text-align: center;
+
+}

@@ -7,7 +7,7 @@ import success from '../../mixkit-player-boost-recharging-2040.wav';
 
 const API = process.env.REACT_APP_API_URL;
 
-function EditLocation() {
+function EditLocation({ notify }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [error, setError] = useState('');

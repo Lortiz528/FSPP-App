@@ -1,37 +1,31 @@
-
+import './about.scss'
 
 export default function About() {
 
   return (
     <div className="aboutpage">
-      <h2>Thanks for Visiting!</h2>
-
+      <h1>Thanks for Visiting!</h1>
+      <hr></hr>
+      <div className='resources'>
+      <h2>Resources</h2>
       <h3><a href="https://github.com/Lortiz528/FSPP-App" >Github Repo Here</a></h3>
+      <h3><a href='https://www.amiiboapi.com/' >Amiibo API page</a></h3>
+      </div>
+
       <hr></hr>
       <div>
-        <h3>Luis Ortiz</h3>
+        <h3>Created by Luis Ortiz</h3>
         <img
           className="profile"
           src="https://avatars.githubusercontent.com/u/96318347?v=4"
           alt="Luis"
         />
-        <p className="bio">
+        <strong><p className="bio">
           I am a full stack developer with a background in
           Logistics/transportation. I have a passion for wildlife, space
           exploration, and baseball.
-          <br />
-          <br />
-       Talk to me about:
-        </p>
-        <ul className="bioList">
-          <li>The Mets!</li>
-          <li>Any BBC Nature docu-series</li>
-          <li>James Webb Telescope</li>
-          <li>UFOs</li>
-          <li>Side hustle ideas</li>
-          <li>retro video games</li>
-          <li>Road Trips</li>
-        </ul>
+        </p></strong>
+        
         <div className="links">
           <a className="github" href="https://github.com/Lortiz528">
             <img
@@ -42,8 +36,6 @@ export default function About() {
               alt="github"
             />
           </a>
-
-          <p>
             <a href="https://www.buymeacoffee.com/lortiztech">
               <img
                 align="center"
@@ -53,7 +45,7 @@ export default function About() {
                 alt="lortiztech"
               />
             </a>
-          </p>
+         
           <a href="https://linkedin.com/in/lortiz528" target="blank">
             <img
               align="center"
