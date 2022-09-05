@@ -1,6 +1,6 @@
-# Home inventory App
+# Coolection Corner!
 
-this is an app to maintain various collections such as retro video games, consoles, and amiibo figurines. Enjoy!
+This is an app to maintain various collections such as retro video game consoles and amiibo figurines. Enjoy!
 
 ## Important Links
 
@@ -10,11 +10,63 @@ this is an app to maintain various collections such as retro video games, consol
 ## App planning resources 
 
 - [Trello Board](https://trello.com/invite/b/ABTWrZXr/af5e35ff4cbe5df2caec988fc6eac12d/fspp-inventory-app)
-- [ERD]()
-- [Wireframes]()
+
+## App Features
+- This app is set up to look and work properly on desktop and mobile platforms. 
+- Customized to suit viewport for Apple Iphone 13 pro max screens for perosnal use.
+- Users can add, edit and delete Amiibos, consoles, and store locations.
+- [Sound effects](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio) when user successfully adds, edits, or deletes an item.
+- Uses [React Toastify](https://www.npmjs.com/package/react-toastify) for success message pop ups.
+- Accesses an [Amiibo API](https://www.amiiboapi.com/) to display the entire amiibo lineup for the user to easily use official character names and images.
+- Form for adding to amiibos to the collection is fixed on the page so that its visible as a user scrolls through 850+ amiibos from the API.
+- Links to shop for amiibos and consoles from external website.
+- links to google maps for store locations.
+- links to mercari and google maps will redirect to the corresponding app if installed on your mobile device.
+- Customized favicon and home logo.
+- Includes an "About" page that includes links to github repo and amiibo API documentation.
+- 
 
 ## If you'd like to run my project locally, please read the following steps:
 
 ### Frontend Setup
+```
+# clone this repository to your machine.
+git clone git@github.com:Lortiz528/FSPP-App.git
+
+# navigate to the front-end directory
+cd FSPP-App/front-end
+
+# create a .env file and paste in the following:
+REACT_APP_API_URL=http://localhost:3333
+
+# npm install while in the front-end folder
+npm install
+
+# to start the front end server
+npm start
+```
 
 ### Backend Setup
+
+```
+# navigate to the back-end directory
+cd FSPP-App/back-end
+
+# create a .env file and paste in the following:
+
+PORT=3333
+PG_HOST=localhost
+PG_PORT=5432
+PG_DATABASE=home_inventory
+
+# npm install while in the back-end folder
+npm install
+
+# initialize and seed the database
+npm run db:init
+npm run db:seed
+
+# start the server
+nodemon server.js
+
+```
