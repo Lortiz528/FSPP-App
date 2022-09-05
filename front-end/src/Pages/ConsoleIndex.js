@@ -10,6 +10,11 @@ function ConsoleIndex() {
       <Button className="addconsolebtn" variant="primary">
         <Link to="/consoles/new">Add a Console</Link>
       </Button>
+      <br/>
+      <br/>
+      <Button className='shopConsolebtn' variant='primary'>
+          <a href='https://www.mercari.com/search/?keyword=consoles' >Shop for More</a>
+        </Button>
       <Consoles />
     </div>
   );
