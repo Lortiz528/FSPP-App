@@ -1,12 +1,13 @@
 import './navbar.scss';
 
 import { Link } from 'react-router-dom';
+import logo from '../../Images/cclogo2.png'
 
 function Navbar() {
   return (
     <nav className="navbar">
-      <Link to="/" style={{ textDecoration: 'none' }}>
-        Go Home
+      <Link to='/'>
+      <img src={logo} alt="collection corner logo" className="ccLogo" />
       </Link>
       <Link to="/collections" style={{ textDecoration: 'none' }}>
         Collections

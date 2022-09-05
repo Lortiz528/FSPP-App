@@ -180,3 +180,17 @@ function EditAmiibo() {
 }
 
 export default EditAmiibo;
+
+
+/*
+
+const [cake, setcake] = useState({
+  is-favorite: cake.is_favorite
+})
+
+const handleCheckbox = () =>{
+  setCake({
+    ...cake, is_favorite: !cake.is_favorite
+  })
+}
+*/
