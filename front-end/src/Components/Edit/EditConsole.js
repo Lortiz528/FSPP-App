@@ -31,7 +31,7 @@ function EditConsole() {
       })
       .catch((err) => {
         setError(err);
-        navigate('/*')
+        navigate('/*');
       });
   }, [id, navigate]);
 
@@ -121,6 +121,16 @@ function EditConsole() {
             type="text"
             name="brand"
             value={console.brand}
+            onChange={handleTextChange}
+            required
+          />
+        </Form.Group>
+        <Form.Group controlId="color">
+          <Form.Label>Color</Form.Label>
+          <Form.Control
+            type="text"
+            name="color"
+            value={console.color}
             onChange={handleTextChange}
             required
           />

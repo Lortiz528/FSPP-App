@@ -163,6 +163,7 @@ function NewConsole() {
             Submit
           </Button>
         </Form>
+        <br/>
         <Button className="newconsolebackbtn" variant="primary">
           <Link to="/consoles">Go Back</Link>
         </Button>
