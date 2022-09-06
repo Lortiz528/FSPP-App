@@ -4,7 +4,7 @@ This is an app to maintain various collections such as retro video game consoles
 
 ## Important Links
 
-- [Deployed frontend](https://my-collections.netlify.app/)
+- [Deployed frontend](https://collection-corner.netlify.app/)
 - [Deployed API Server](https://immense-refuge-16416.herokuapp.com/)
 
 ## App planning resources
