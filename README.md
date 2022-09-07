@@ -18,6 +18,7 @@ This is an app to maintain various collections such as retro video game consoles
 - Users can add, edit and delete Amiibos, consoles, and store locations.
 - [Sound effects](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio) when user successfully adds, edits, or deletes an item.
 - Uses [React Toastify](https://www.npmjs.com/package/react-toastify) for success message pop ups.
+- Uses React bootstrap for [buttons](https://react-bootstrap.github.io/components/buttons/) and [forms](https://react-bootstrap.github.io/forms/overview/).
 - Accesses an [Amiibo API](https://www.amiiboapi.com/) to display the entire amiibo lineup for the user to easily use official character names and images.
 - Add new amiibo form is fixed on the page so that its visible as a user scrolls through 850+ amiibos from the API.
 - Links to shop for amiibos and consoles from external website.
