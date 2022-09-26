@@ -31,9 +31,9 @@ function Locations() {
             <h4>{location.store_name}</h4>
             <Link to={`/locations/${location.id}`}>
               {location.image ? (
-                <img src={location.image} />
+                <img src={location.image} alt= {location.store_name} />
               ) : (
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png?20210219185637" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png?20210219185637" alt = 'blank' />
               )}
             </Link>
           </div>
